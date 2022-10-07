@@ -1,0 +1,15 @@
+{
+	"name": "Project",
+	"version": "1.0.0",
+	"description":" ",
+	"main": "maimpage.html",
+	"scripts": {
+	   "test": "echo\"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+	 "attack",
+	 "deffend"
+	],
+	"author": "Akash Shetty",
+	"license": "ISC",
+}
