@@ -1,0 +1,224 @@
+:root 
+{
+    --color-primary: hsl(244, 100%, 50%);
+    --color-white:white;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+}
+  
+* 
+{
+    margin: 0;
+    padding: 0;
+  
+}
+  
+body 
+{
+    font-family: sans-serif;
+   
+}
+  
+.logo 
+{
+    color: var(--color-white);
+    font-size: 30px;
+}
+  
+.logo span 
+{
+    color: var(--color-primary);
+}
+  
+.menu-bar
+{
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;  
+    position: relative;
+}
+  
+.menu-bar ul 
+{
+    list-style: none;
+    display: flex;
+}
+  
+.menu-bar ul li 
+{
+
+    padding: 10px 30px;  
+    position: relative;
+}
+  
+.menu-bar ul li a 
+{
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;  
+    transition: all 0.3s;
+}
+  
+.menu-bar ul li a:hover 
+{
+    color: var(--color-primary);
+}
+  
+.fas 
+{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+  
+  /* dropdown menu style */
+.dropdown-menu 
+{
+    display: none;
+}
+  
+.menu-bar ul li:hover .dropdown-menu 
+{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+}
+.menu-bar ul li:hover .dropdown-menu ul 
+{
+    display: block;
+    margin: 10px;
+}
+  
+.menu-bar ul li:hover .dropdown-menu ul li 
+{
+    width: 150px;
+    padding: 10px;
+}
+  
+.dropdown-menu-1 
+{
+    display: none;
+}
+  
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+}
+  
+.hero 
+{
+    height: calc(100vh - 80px);
+    background-image: url(./bg.jpg);
+    background-position: center;
+}
+a
+{
+      text-decoration: none;
+      color: palevioletred;
+      font-size: 28px;
+}
+body 
+{
+    font-family: "Roboto", sans-serif;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+  
+h1 
+{
+    margin: 25px 12px;
+    text-align: center;    
+    padding-left: 16px;
+}
+  
+.container 
+{
+    padding: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.container h1{
+    margin-top: 45;
+    margin: 25px 25px;
+    text-align: center;    
+    padding-left: 16px;
+}
+.container .group 
+{
+    padding: 8px 48px;
+    margin: 10px;
+    margin-left: 50px;
+}
+  
+input[type="checkbox"] {
+    display: none;
+}
+  
+label {
+    position: relative;
+}
+  
+label::before {
+    content: "";
+    background: url(check-cricle.jpeg);
+    background-position: center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -44px;
+    top: -8px; 
+    transform: scale(0) rotateZ(180deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+  
+input[type="checkbox"]:checked + label::before {
+    transform: scale(1) rotateZ(0deg);
+}
+  
+label::after {
+    content: "";
+    border: 2px solid #27ae60;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: -42px;
+    top: -6px;
+    border-radius: 50%;
+}
+
+.print_value{
+    position: relative;
+    text-align: center;
+    margin-top: 250px;
+}
+.print_value p{
+    background: white;
+    padding: 30px;
+    color: black;
+    text-transform: capitalize;
+    border-top: 4px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.button{  
+    text-align: center;
+
+}  
+#btn{  
+    font-size: 25px;  
+}
+.akash{
+    width: 100%;
+}
