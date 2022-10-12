@@ -28,22 +28,22 @@
                     <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
-                <form id='login' class='input-group-login'> <!---login code----->
-                    <input type='text'class='input-field'placeholder='Email Id' required > <!-- E-mail entry----->
-		            <input type='password'class='input-field'placeholder='Enter Password' required> <!-- password entry----->
-		            <input type='checkbox'class='check-box'><span>Remember Password</span>  <!-- remembre password option----->
+                <form id='login' class='input-group-login' method='POST'> <!---login code----->
+                    	<input type='text'class='input-field'name='id'placeholder='Email Id' required > <!-- E-mail entry----->
+		        <input type='password'class='input-field'name='pass'placeholder='Enter Password' required> <!-- password entry----->
+		        <input type='checkbox'class='check-box'><span>Remember Password</span>  <!-- remembre password option----->
                     <span class="fp"><a href="forpassword.html"> Forgot Password</a></span> <!-- forgot button option----->
 			<button type='submit'class='submit-btn'><a href=profile.html></a>Log in</button>  <!-- login button----->
-		        </form>
-		        <form id='register' class='input-group-register'> <!--- register code----->
-		            <input type='text'class='input-field'placeholder='First Name' required>  <!-- first name entry----->
-		            <input type='text'class='input-field'placeholder='Last Name ' required> <!-- last name----->
-		            <input type='email'class='input-field'placeholder='Email Id' required> <!-- E-mail id----->
-                    <input type="j/s"class='input-field'placeholder='Employ or student'required> <!-- option for employ or student----->
-		            <input type='password'  class='input1'placeholder='Enter Password' required>  <!-- password----->
+		</form>
+		<form id='register' class='input-group-register' method='POST'> <!--- register code----->
+		            <input type='text'class='input-field'name='fname'placeholder='First Name' required>  <!-- first name entry----->
+		            <input type='text'class='input-field'name='lname'placeholder='Last Name ' required> <!-- last name----->
+		            <input type='email'class='input-field'name='id'placeholder='Email Id' required> <!-- E-mail id----->
+                     	    <input type='text'class='input-field'name='role'placeholder='Employee or Student'required> <!-- option for employ or student----->
+		            <input type='password'  class='input1'name='pass'placeholder='Enter Password' required>  <!-- password----->
 		            <input type='password'class='input2'placeholder='Confirm Password'  required> <!-- re-enter the password----->
                     <input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span>  <!-- agree condition-----> 
-			<button type='submit'class='submit-btn1' ><a href=mmaimpage.html></a>Register</button>  <!-- register button----->
+		    <button type='submit'class='submit-btn1' ><a href=maimpage.html></a>Register</button>  <!-- register button----->
 	         </form>
             </div>
         </div>
