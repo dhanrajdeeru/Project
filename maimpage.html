@@ -3,52 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
-    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="mainpage.css">  <!-- style page for mainpage----->
     <!---we had linked our css file----->
 </head>
 <body>
     <div class="full-page">
         <div class="navbar">
             <div>
-                <a class="a" href='profiepage.html'>SISA</a>
+                <a class="a" href='profiepage.html'>SISA</a>   <!--- it link to sisa website----->
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    <li class="a"><a href='profiepage.html'>Home</a></li>
-                    <li class="a"><a href='https://www.sisainfosec.com/in/'>About Us</a></li>
+                    <li class="a"><a href='profiepage.html'>Home</a></li> <!-- connect for sisa home page----->
+                    <li class="a"><a href='https://www.sisainfosec.com/in/'>About Us</a></li> <!-- detail for home page----->
                     <li class="a"><a href='#'>Services</a></li>
-                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li> <!-- button for login----->
                 </ul>
             </nav>
         </div>
-        <div id='login-form'class='login-page'>
+        <div id='login-form'class='login-page'><!--- login and register option----->
             <div class="form-box">
                 <div class='button-box'>
                     <div id='btn'></div>
                     <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
-                <form id='login' class='input-group-login' method='POST'>
-                    <input type='text'class='input-field'name='id'placeholder='Email Id OR User ID' required >
-		            <input type='password'class='input-field'name='pass'placeholder='Enter Password' required>
-		            <input type='checkbox'class='check-box'><span>Remember Password</span>
-                    <span class="fp"><a href="forpassword.html"> Forgot Password</a></span>
-		            <button type='submit'class='submit-btn'>Log in</button>
+                <form id='login' class='input-group-login'> <!---login code----->
+                    <input type='text'class='input-field'placeholder='Email Id' required > <!-- E-mail entry----->
+		            <input type='password'class='input-field'placeholder='Enter Password' required> <!-- password entry----->
+		            <input type='checkbox'class='check-box'><span>Remember Password</span>  <!-- remembre password option----->
+                    <span class="fp"><a href="forpassword.html"> Forgot Password</a></span> <!-- forgot button option----->
+		            <button type='submit'class='submit-btn'>Log in</button>  <!-- login button----->
 		        </form>
-		        <form id='register' class='input-group-register' method='POST'>
-		            <input type='text'class='input-field'name='fname'placeholder='First Name' required>
-		            <input type='text'class='input-field'name='lname'placeholder='Last Name ' required>
-		            <input type='email'class='input-field'name='email'placeholder='Email Id' required>
-                            <input type='text'class='input-field'name=placeholder='Employee or Student'required>
-		            <input type='password'class='input-field'name='pass'placeholder='Enter Password' required>
-		            <input type='password'class='input-field'placeholder='Confirm Password'  required>
-                    <input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span> 
-                    <button type='submit'class='submit-btn' >Register</button>
+		        <form id='register' class='input-group-register'> <!--- register code----->
+		            <input type='text'class='input-field'placeholder='First Name' required>  <!-- first name entry----->
+		            <input type='text'class='input-field'placeholder='Last Name ' required> <!-- last name----->
+		            <input type='email'class='input-field'placeholder='Email Id' required> <!-- E-mail id----->
+                    <input type="j/s"class='input-field'placeholder='Employ or student'required> <!-- option for employ or student----->
+		            <input type='password'  class='input1'placeholder='Enter Password' required>  <!-- password----->
+		            <input type='password'class='input2'placeholder='Confirm Password'  required> <!-- re-enter the password----->
+                    <input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span>  <!-- agree condition-----> 
+                    <button type='submit'class='submit-btn1' >Register</button>  <!-- register button----->
 	         </form>
             </div>
         </div>
     </div>
-    <script>
+    <!---java script for togle button ----->
+    <script> 
         var x=document.getElementById('login');
 		var y=document.getElementById('register');
 		var z=document.getElementById('btn');
@@ -65,6 +66,7 @@
 			z.style.left='0px';
 		}
 	</script>
+    <!--- for popup ----->
 	<script>
         var modal = document.getElementById('login-form');
         window.onclick = function(event) 
@@ -73,6 +75,18 @@
             {
                 modal.style.display = "none";
             }
+        }
+    </script>
+	<!--- script used to match the password----->
+    <script>
+        document.querySelector('.submit-btn1').onclick = function() {
+            var input1= document.querySelector('.input1').value, input2= document.querySelector('.input2').value;
+                if( input1=''){
+                    alert('field is empty')
+                }
+                else if(input1 != input2){
+                    alert('password dose not match')
+                }
         }
     </script>
 </body>
