@@ -28,19 +28,19 @@
                     <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
-                <form id='login' class='input-group-login'>
-                    <input type='text'class='input-field'placeholder='Email Id' required >
-		            <input type='password'class='input-field'placeholder='Enter Password' required>
+                <form id='login' class='input-group-login' method='POST'>
+                    <input type='text'class='input-field'name='id'placeholder='Email Id OR User ID' required >
+		            <input type='password'class='input-field'name='pass'placeholder='Enter Password' required>
 		            <input type='checkbox'class='check-box'><span>Remember Password</span>
                     <span class="fp"><a href="forpassword.html"> Forgot Password</a></span>
 		            <button type='submit'class='submit-btn'>Log in</button>
 		        </form>
-		        <form id='register' class='input-group-register'>
-		            <input type='text'class='input-field'placeholder='First Name' required>
-		            <input type='text'class='input-field'placeholder='Last Name ' required>
-		            <input type='email'class='input-field'placeholder='Email Id' required>
-                    <input type="j/s"class='input-field'placeholder='Employ or student'required>
-		            <input type='password'class='input-field'placeholder='Enter Password' required>
+		        <form id='register' class='input-group-register' method='POST'>
+		            <input type='text'class='input-field'name='fname'placeholder='First Name' required>
+		            <input type='text'class='input-field'name='lname'placeholder='Last Name ' required>
+		            <input type='email'class='input-field'name='email'placeholder='Email Id' required>
+                            <input type='text'class='input-field'name=placeholder='Employee or Student'required>
+		            <input type='password'class='input-field'name='pass'placeholder='Enter Password' required>
 		            <input type='password'class='input-field'placeholder='Confirm Password'  required>
                     <input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span> 
                     <button type='submit'class='submit-btn' >Register</button>
