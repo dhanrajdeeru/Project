@@ -53,11 +53,14 @@ def login():
 		db_cursor.execute(s)
     		res=db_cursor.fetchall()
 		if res == pass:
-			return jsonify({'done':"Login Successful"})
+			txt="Login Successful"
+			return render_template('profile.html',txt=txt)
 		else:
-			return jsonify({'fail':"Invalid Password"})
+			txt="Invalid Password"
+			return render_template('maimpage.html',txt=txt)
 	else:
-		return jsonify({'wrong':"Invalid Email or UID"})
+		txt="Invalid Email or UID"
+		return render_template('maimpage.html',txt=txt)
 	
     except psycopg2.Error as e:
         return jsonify({'error':e})
