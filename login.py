@@ -3,6 +3,7 @@ from flask import render_template # to render our html page
 from flask import request # to get user input from form
 import hashlib # included in Python library, no need to install
 import psycopg2 # for database connection
+import json
 
 app = Flask(__name__)
 
@@ -12,8 +13,8 @@ app = Flask(__name__)
 
 def login():
     # get user input from the html form
-    id = request.form.get("id", "")
-    pass = request.form.get("pass", "")
+    id = request.form['id']
+    pass = request.form['pass']
 
     # hash the password they entered
     #t_hashed = hashlib.sha256(t_password.encode())
@@ -26,7 +27,7 @@ def login():
     	dbname = "PURPLETEAMING"
     	user = "webadmin"
     	pw = "webadminpassword"
-    	db_conn = psycopg2.connect(host=host, port=port, dbname=dbname, user=user, password=pw)
+    	db_conn = psycopg2.connect(database=dbname, user=user, password=pw, host=host, port=port)
     	db_cursor = db_conn.cursor()
 
     # Get user ID from PostgreSQL users table
@@ -59,5 +60,4 @@ def login():
 		return jsonify({'wrong':"Invalid Email or UID"})
 	
     except psycopg2.Error as e:
-        t_message = "Database error: " + e + "/n SQL: " + s
-        return render_template("maimpage.html", message = t_message)
+        return jsonify({'error':e})
