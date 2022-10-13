@@ -41,7 +41,7 @@
 		            <input type='email'class='input-field'name='id'placeholder='Email Id' required> <!-- E-mail id----->
                      	    <input type='text'class='input-field'name='role'placeholder='Employee or Student'required> <!-- option for employ or student----->
 		            <input type='password'  class='input1'name='pass'placeholder='Enter Password' required>  <!-- password----->
-		            <input type='password'class='input2'placeholder='Confirm Password'  required> <!-- re-enter the password----->
+		            <input type='password'class='input2'name='cpass'placeholder='Confirm Password'  required> <!-- re-enter the password----->
                     <input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span>  <!-- agree condition-----> 
 		    <button type='submit'class='submit-btn1' ><a href=maimpage.html></a>Register</button>  <!-- register button----->
 	         </form>
@@ -81,7 +81,7 @@
 	<!--- script used to match the password----->
     <script>
         document.querySelector('.submit-btn1').onclick = function() {
-            var input1= document.querySelector('.input1').value, input2= document.querySelector('.input2').value;
+            var input1= document.querySelector('pass').value, input2= document.querySelector('cpass').value;
                 if( input1=''){
                     alert('field is empty')
                 }
