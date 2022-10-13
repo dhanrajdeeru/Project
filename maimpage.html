@@ -29,8 +29,8 @@
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
                 <form id='login' class='input-group-login' method='POST'> <!---login code----->
-                    	<input type='text'class='input-field'name='id'placeholder='Email Id' required > <!-- E-mail entry----->
-		        <input type='password'class='input-field'name='pass'placeholder='Enter Password' required> <!-- password entry----->
+                    	<input type='text'class='input-field'id='id'placeholder='Email Id' required > <!-- E-mail entry----->
+		        <input type='password'class='input-field'id='pass'placeholder='Enter Password' required> <!-- password entry----->
 		        <input type='checkbox'class='check-box'><span>Remember Password</span>  <!-- remembre password option----->
                     <span class="fp"><a href="forpassword.html"> Forgot Password</a></span> <!-- forgot button option----->
 			<button type='submit'class='submit-btn'><a href=profile.html></a>Log in</button>  <!-- login button----->
@@ -92,36 +92,6 @@
                     alert('password  match')
                 }
         }
-    </script>
-    <script>
-	$(document).ready(function() {
-	$('form').on('submit', function(event) {
-		$.ajax({
-			data : {
-				id : $('#id').val(),
-				pass : $('#pass').val()
-			},
-			type : 'POST',
-			url : '/login.py' 
-		})
-		.done(function(data) {
-			if (data.done) {
-				var t1=text(data.done);
-				$alert(t1);
-			}
-			else if (data.fail)  {
-				var t2=text(data.fail);
-				$alert(t2);
-			}
-			else {
-				var t3=text(data.wrong);
-				$alert(t3);
-			}
-			window.location = data.getResponseHeader('profile.html');
-		});
-		event.preventDefault();
-        });
-	});
     </script>
 </body>
 </html>
