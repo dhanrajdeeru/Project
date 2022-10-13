@@ -6,7 +6,7 @@ $(document).ready(function() {
 				pass : $('#pass').val()
 			},
 			type : 'POST',
-			url : '/login'
+			url : 'login.py'
 		})
 		.done(function(data) {
 			if (data.done) {
