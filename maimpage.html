@@ -10,11 +10,11 @@
     <div class="full-page">
         <div class="navbar">
             <div>
-                <a class="a" href='profiepage.html'>SISA</a>   <!--- it link to sisa website----->
+                <a class="a" href='profilepage.html'>SISA</a>   <!--- it link to sisa website----->
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    <li class="a"><a href='profiepage.html'>Home</a></li> <!-- connect for sisa home page----->
+                    <li class="a"><a href='profilepage.html'>Home</a></li> <!-- connect for sisa home page----->
                     <li class="a"><a href='https://www.sisainfosec.com/in/'>About Us</a></li> <!-- detail for home page----->
                     <li class="a"><a href='#'>Services</a></li>
                     <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li> <!-- button for login----->
@@ -99,9 +99,9 @@
 				pass : $('#pass').val()
 			},
 			type : 'POST',
-			url : '/login'
+			url : '~/login.py'
 			success: function (result) { 
-			window.location = result.getResponseHeader('Location');
+			window.location = result.getResponseHeader('profile.html');
 			}
 		})
 		.done(function(data) {
@@ -118,6 +118,7 @@
 				var t3=text(data.wrong);
 				$alert(t3);
 			}
+			
 		});
 		event.preventDefault();
         });
