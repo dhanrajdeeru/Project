@@ -81,13 +81,13 @@
 	<!--- script used to match the password----->
     <script>
         document.querySelector('.submit-btn1').onclick = function() {
-            var input1= document.getElementsByName('pass').value; 
-	    var input2= document.getElementsByName('cpass').value;
-                if( input1=''){
-                    alert('field is empty')
-                }
-                else if(input1 != input2){
+            var input1= document.querySelector('.input1').value,
+                input2= document.querySelector('.input2').value;
+                if(input1!=input2){
                     alert('password dose not match')
+                }
+                else if(input1 == input2){
+                    alert('password  match')
                 }
         }
     </script>
