@@ -201,7 +201,7 @@ label::after {
 .print_value{
     position: relative;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 .print_value p{
     background: white;
