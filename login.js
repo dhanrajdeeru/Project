@@ -1,3 +1,4 @@
+var$=jquery.noconflict();
 $(document).ready(function() {
 	$('#login').on('submit', function(event) {
 		$.ajax({
