@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('form').on('submit', function(event) {
+	$('#login').on('submit', function(event) {
 		$.ajax({
 			data : {
 				id : $('#id').val(),
