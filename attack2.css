@@ -41,6 +41,18 @@ body
     padding: 0 5%;  
     position: relative;
 }
+.submit-btn
+{
+	width: 85%;
+	padding: 10px 30px;    
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #F3C693;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
   
 .menu-bar ul 
 {
