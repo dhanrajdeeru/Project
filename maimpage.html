@@ -115,20 +115,29 @@
 		})
 	}
 </script>
-	<script>
-	function register_js(){
-            const formData2 = new FormData(document.getElementById('register'));
-		fetch('register.php',{
-			method:'POST',
-			body: formData2
-		}).then(function (response) {
-			return response.text();
-		}).then(function (text) {
-			console.log(text);
-		}).catch(function (error) {
-			console.error(error);
-		})
-	}
-</script>
+    <script type="text/javascript">
+        function register_js(){
+            var fname = $('input[name=fname]').val();
+        var lname = $('input[name=lname]').val();
+        var id = $('input[name=id]').val();
+        var roles = $('input[name=roles]').val();
+        var ph = $('input[name=ph]').val();
+        var gender = $('input[name=gender]').val();
+        var age = $('input[name=age]').val();
+        var passw = $('input[name=passw]').val();
+        var cpass = $('input[name=cpass]').val();
+            const formData2 = {fname:fname,lname:lname,id:id,roles:roles,ph:ph,gender:gender,age:age,passw:passw,cpass:cpass};
+            fetch('register.php',{
+                method:'POST',
+                body: formData2
+            }).then(function (response) {
+                return response.text();
+            }).then(function (text) {
+                console.log(text);
+            }).catch(function (error) {
+                console.error(error);
+            })
+        }
+    </script>
 </body>
 </html>
