@@ -28,14 +28,14 @@
                     <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
-                <form id='login' class='input-group-login' method='POST' action='login.php'> <!---login code----->
+                <form id='login' class='input-group-login' method='POST' onsubmit='login_js()'> <!---login code----->
                     <input type='text'class='input-field'id='id'placeholder='Email Id' required > <!-- E-mail entry----->
 		            <input type='password'class='input-field'id='passw'placeholder='Enter Password' required> <!-- password entry----->
 		            <label class=login_check><input type='checkbox'class='check-box'><span>Remember Password</span></label>  <!-- remembre password option----->
                     <span class="fp"><a href="forpassword.html"> Forgot Password</a></span> <!-- forgot button option----->
 			        <button type='submit'class='submit-btn'>Log in</button>  <!-- login button----->
 		        </form>
-		        <form id='register' class='input-group-register' method='POST' action='register.php'> <!--- register code----->
+		        <form id='register' class='input-group-register' method='POST' onsubmit='register_js()'> <!--- register code----->
                     <input type='text'class='input-field'name='fname'placeholder='First Name' required>  <!-- first name entry----->
 	<input type='text'class='input-field'name='lname'placeholder='Last Name ' required> <!-- last name----->
 	<input type='email'class='input-field'name='id'placeholder='Email Id' required> <!-- E-mail id----->
@@ -103,13 +103,11 @@
         }
     </script>
 <script>
-	const myForm = document.getElementById('login');
-	login.addEventListener('submit',function(e){
-		e.preventDefault();
-		const formData = new FormData(this);
+	function login_js(){
+		const formData1 = new FormData(login);
 		fetch('login.php',{
 			method:'POST',
-			body: formData
+			body: formData1
 		}).then(function (response) {
 			return response.text();
 		}).then(function (text) {
@@ -117,16 +115,14 @@
 		}).catch(function (error) {
 			console.error(error);
 		})
-	});
+	}
 </script>
 	<script>
-	const myForm = document.getElementById('register');
-	register.addEventListener('submit',function(e){
-		e.preventDefault();
-		const formData = new FormData(this);
+	function register_js(){
+		const formData2 = new FormData(register);
 		fetch('register.php',{
 			method:'POST',
-			body: formData
+			body: formData2
 		}).then(function (response) {
 			return response.text();
 		}).then(function (text) {
@@ -134,7 +130,7 @@
 		}).catch(function (error) {
 			console.error(error);
 		})
-	});
+	}
 </script>
 </body>
 </html>
