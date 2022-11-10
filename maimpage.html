@@ -102,7 +102,7 @@
     </script>
 <script>
 	function login_js(){
-		const formData1 = new FormData(login);
+            const formData1 = new FormData(document.getElementById('login'));
 		fetch('login.php',{
 			method:'POST',
 			body: formData1
@@ -117,7 +117,7 @@
 </script>
 	<script>
 	function register_js(){
-		const formData2 = new FormData(register);
+            const formData2 = new FormData(document.getElementById('register'));
 		fetch('register.php',{
 			method:'POST',
 			body: formData2
