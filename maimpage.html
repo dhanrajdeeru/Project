@@ -28,29 +28,33 @@
                     <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
-                <form id='login' class='input-group-login'> <!---login code----->
+                <form id='login' class='input-group-login' method='POST' action='login.php'> <!---login code----->
                     <input type='text'class='input-field'id='id'placeholder='Email Id' required > <!-- E-mail entry----->
-		            <input type='password'class='input-field'id='pass'placeholder='Enter Password' required> <!-- password entry----->
+		            <input type='password'class='input-field'id='passw'placeholder='Enter Password' required> <!-- password entry----->
 		            <label class=login_check><input type='checkbox'class='check-box'><span>Remember Password</span></label>  <!-- remembre password option----->
                     <span class="fp"><a href="forpassword.html"> Forgot Password</a></span> <!-- forgot button option----->
 			        <button type='submit'class='submit-btn'>Log in</button>  <!-- login button----->
 		        </form>
-		        <form id='register' class='input-group-register'> <!--- register code----->
+		        <form id='register' class='input-group-register' method='POST' action='register.php'> <!--- register code----->
                     <input type='text'class='input-field'name='fname'placeholder='First Name' required>  <!-- first name entry----->
-		            <input type='text'class='input-field'name='lname'placeholder='Last Name ' required> <!-- last name----->
-		            <input type='email'class='input-field'name='id'placeholder='Email Id' required> <!-- E-mail id----->
-                    <input type='text'class='input-field'name='role'placeholder='Employee or Student'required> <!-- option for employ or student----->
-			        <input type="number"class='input-field'placeholder='Phone number'required min="10" max="12"> <!-- option for phone number----->
-			        <select type="text"class='input-field'name='gender' placeholder='Gender' id="gender" required>
-                        <option value="gender" class='input-field1' ">Gender</option>
-                        <option value="M" class='input-field1' >Male</option>
-                        <option value="F" class='input-field1'>Female</option>
-                    </select> <!-- option for Gender----->
-                    <input type="number"class='input-field'placeholder='Age'required min="1" max="2"> <!-- option for Age----->
-		            <input type='password'  class='input1'name='pass'placeholder='Enter Password' required>  <!-- password----->
-		            <input type='password'class='input2'name='cpass'placeholder='Confirm Password'  required> <!-- re-enter the password----->
-                    <label class=reg_check><input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span></label>  <!-- agree condition-----> 
-		            <button type='submit'class='submit-btn1' ><a href=maimpage.html>Register</a></button>  <!-- register button----->
+	<input type='text'class='input-field'name='lname'placeholder='Last Name ' required> <!-- last name----->
+	<input type='email'class='input-field'name='id'placeholder='Email Id' required> <!-- E-mail id----->
+    <select type="text"class='input-field'name='roles' placeholder='Role' id="roles" required>
+    <option value="none" selected disabled hidden>Select an Option</option>
+    <option value="Student" class='input-field1' >Student</option>
+    <option value="Employee" class='input-field1'>Employee</option>
+    </select> <!-- option for employ or student----->
+	<input type="tel"class='input-field'name='ph'placeholder='Phone number'required > <!-- option for phone number----->
+	<select type="text"class='input-field'name='gender' placeholder='Gender' id="gender" required>
+    <option value="none" selected disabled hidden>Select an Option</option> 
+    <option value="Male" class='input-field1' >Male</option>
+    <option value="Female" class='input-field1'>Female</option>
+    </select> <!-- option for Gender----->
+    <input type="number"class='input-field'placeholder='Age'name='age'required min="12" max="100"> <!-- option for Age----->
+	<input type='password'  class='input1'name='passw'placeholder='Enter Password' required>  <!-- password----->
+	<input type='password'class='input2'name='cpass'placeholder='Confirm Password'  required> <!-- re-enter the password----->
+    <label class=reg_check><input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span></label>  <!-- agree condition-----> 
+		            <button type='submit'class='submit-btn1' >Register</a></button>  <!-- register button----->
 	         </form>
             </div>
         </div>
