@@ -7,17 +7,15 @@
     <!---we had linked our css file----->
     <script src="login.js"></script>
 </head>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <body>
     <div class="full-page">
         <div class="navbar">
             <div>
-                <a class="a" href='profile.html'>SISA</a>   <!--- it link to sisa website----->
+                <a class="a" href='profiepage.html'>SISA</a>   <!--- it link to sisa website----->
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    <li class="a"><a href='profile.html'>Home</a></li> <!-- connect for sisa home page----->
+                    <li class="a"><a href='maimpage.html'>Home</a></li> <!-- connect for sisa home page----->
                     <li class="a"><a href='https://www.sisainfosec.com/in/'>About Us</a></li> <!-- detail for home page----->
                     <li class="a"><a href='#'>Services</a></li>
                     <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li> <!-- button for login----->
@@ -31,25 +29,29 @@
                     <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
-                <form name='login' id='login' class='input-group-login' method='POST'> <!---login code----->
-                    	<input type='text'class='input-field'id='id'placeholder='Email Id' required > <!-- E-mail entry----->
-		        <input type='password'class='input-field'id='pass'placeholder='Enter Password' required> <!-- password entry----->
-		        <label class=login_check><input type='checkbox'class='check-box'><span>Remember Password</span></label>  <!-- remembre password option----->
+                <form id='login' class='input-group-login'> <!---login code----->
+                    <input type='text'class='input-field'id='id'placeholder='Email Id' required > <!-- E-mail entry----->
+		            <input type='password'class='input-field'id='pass'placeholder='Enter Password' required> <!-- password entry----->
+		            <label class=login_check><input type='checkbox'class='check-box'><span>Remember Password</span></label>  <!-- remembre password option----->
                     <span class="fp"><a href="forpassword.html"> Forgot Password</a></span> <!-- forgot button option----->
-			<button type='submit'class='submit-btn'>Log in</button>  <!-- login button----->
-		</form>
-		<form name='register' id='register' class='input-group-register' method='POST'> <!--- register code----->
-		            <input type='text'class='input-field'name='fname'placeholder='First Name' required>  <!-- first name entry----->
+			        <button type='submit'class='submit-btn'>Log in</button>  <!-- login button----->
+		        </form>
+		        <form id='register' class='input-group-register'> <!--- register code----->
+                    <input type='text'class='input-field'name='fname'placeholder='First Name' required>  <!-- first name entry----->
 		            <input type='text'class='input-field'name='lname'placeholder='Last Name ' required> <!-- last name----->
 		            <input type='email'class='input-field'name='id'placeholder='Email Id' required> <!-- E-mail id----->
-                     	    <input type='text'class='input-field'name='role'placeholder='Employee or Student'required> <!-- option for employ or student----->
-			    <input type="number"class='input-field'placeholder='Phone number'required> <!-- option for phone number----->
-			    <input type="text"class='input-field'placeholder='Gender'required> <!-- option for Gender----->
-                    	    <input type="text"class='input-field'placeholder='Age'required> <!-- option for Age----->
+                    <input type='text'class='input-field'name='role'placeholder='Employee or Student'required> <!-- option for employ or student----->
+			        <input type="number"class='input-field'placeholder='Phone number'required min="10" max="12"> <!-- option for phone number----->
+			        <select type="text"class='input-field'name='gender' placeholder='Gender' id="gender" required>
+                        <option value="gender" class='input-field1' ">Gender</option>
+                        <option value="M" class='input-field1' >Male</option>
+                        <option value="F" class='input-field1'>Female</option>
+                    </select> <!-- option for Gender----->
+                    <input type="number"class='input-field'placeholder='Age'required min="1" max="2"> <!-- option for Age----->
 		            <input type='password'  class='input1'name='pass'placeholder='Enter Password' required>  <!-- password----->
 		            <input type='password'class='input2'name='cpass'placeholder='Confirm Password'  required> <!-- re-enter the password----->
                     <label class=reg_check><input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span></label>  <!-- agree condition-----> 
-		    <button type='submit'class='submit-btn1' ><a href=maimpage.html>Register</a></button>  <!-- register button----->
+		            <button type='submit'class='submit-btn1' ><a href=maimpage.html>Register</a></button>  <!-- register button----->
 	         </form>
             </div>
         </div>
@@ -83,14 +85,13 @@
             }
         }
     </script>
-	<!--- script used to match the password----->
     <script>
         document.querySelector('.submit-btn1').onclick = function() {
-            var input1= document.querySelector('.input1').value,
+            var input1= document.querySelector('.input1').value, 
                 input2= document.querySelector('.input2').value;
-                if (input1=='' or input2==''){
-		}
-		else if(input1!=input2){
+                if(input1==""){
+                }
+                else if(input1!=input2){
                     alert('password dose not match')
                 }
                 else if(input1 == input2){
