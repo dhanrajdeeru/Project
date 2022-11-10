@@ -54,7 +54,7 @@
 	<input type='password'  class='input1'name='passw'placeholder='Enter Password' required>  <!-- password----->
 	<input type='password'class='input2'name='cpass'placeholder='Confirm Password'  required> <!-- re-enter the password----->
     <label class=reg_check><input type='checkbox'class='check-box'><span ><a href="iagreepage.html"> I agree to the terms and conditions</a>I</span></label>  <!-- agree condition-----> 
-		            <button type='submit'class='submit-btn1' >Register</a></button>  <!-- register button----->
+		            <button type='submit'class='submit-btn1' >Register</button>  <!-- register button----->
 	         </form>
             </div>
         </div>
@@ -98,9 +98,10 @@
                 else if(input1!=input2){
                     alert('Password dose not match!!')
                 }
+		else{
+			login_js();
+		}
         }
-    </script>
-<script>
 	function login_js(){
             const formData1 = new FormData(document.getElementById('login'));
 		fetch('login.php',{
