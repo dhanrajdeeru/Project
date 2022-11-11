@@ -103,7 +103,9 @@
 		}
         }
 	function login_js(){
-            const formData1 = new FormData(document.getElementById('login'));
+		var id = $('input[name=id]').val();
+		var passw = $('input[name=passw]').val();
+		const formData1 = {id:id,passw:passw};
 		fetch('login.php',{
 			method:'POST',
 			body: formData1
