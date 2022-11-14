@@ -63,6 +63,7 @@ $data2 = $stmt2->fetchAll();
                   </ul>
               </div>
           </li>
+          <li><a href="profile.html">logout</a></li>
         </ul>
       </div>
     <div class="akas">
@@ -96,10 +97,10 @@ $data2 = $stmt2->fetchAll();
         <div class="box1">
             <div class="box12">
                 <div class="box121">
-                    <button type='submit'class='submit-btn' onclick="window.location.href = 'attack1.html';">Attack</button>  
+                    <button type='submit'class='submit-btn' class="Attack" id="btn" onclick="window.location.href = 'attack1.html';">Attack</button>  
                     <h6>mention the detail of this part</h6></div>
                 <div class="box122">
-                    <button type='submit'class='submit-btn' onclick="window.location.href = 'defend1.html';">Defend</button>  
+                    <button type='submit'class='submit-btn' class="Defend" id="btn" onclick="window.location.href = 'defend1.html';">Defend</button>  
                     <h6>mention the detail of this part</h6>
                 </div>
             </div>
